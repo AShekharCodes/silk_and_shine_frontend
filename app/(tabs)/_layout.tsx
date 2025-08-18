@@ -1,3 +1,4 @@
+import CustomTabBar from "@/components/navigation/CustomTabBar";
 import { StyledTabs } from "@/components/navigation/tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
@@ -5,7 +6,10 @@ import React from "react";
 
 const TabLayout = () => {
   return (
-    <StyledTabs headerClassName="bg-gray-800">
+    <StyledTabs
+      headerClassName="bg-gray-800"
+      tabBar={(props) => <CustomTabBar {...props} />}
+    >
       <Tabs.Screen
         name="(index)"
         options={{
