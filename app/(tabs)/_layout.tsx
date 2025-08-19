@@ -7,7 +7,9 @@ import React from "react";
 const TabLayout = () => {
   return (
     <StyledTabs
-      headerClassName="bg-gray-800"
+      headerClassName="bg-primary-default/50 shadow-none"
+      sceneClassName="bg-white"
+      screenOptions={{ headerShown: false }}
       tabBar={(props) => <CustomTabBar {...props} />}
     >
       <Tabs.Screen
@@ -34,7 +36,7 @@ const TabLayout = () => {
         options={{
           title: "Explore",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="apps" color={color} size={size} />
+            <Ionicons name="list" color={color} size={size} />
           ),
         }}
       />
@@ -42,6 +44,7 @@ const TabLayout = () => {
         name="cart"
         options={{
           title: "Cart",
+          // tabBarBadge: 18,
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="cart" color={color} size={size} />
           ),

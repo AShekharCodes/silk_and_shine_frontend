@@ -7,15 +7,18 @@ import { ViewStyle } from "react-native";
 function StyledTabsImpl({
   tabBarStyle,
   headerStyle,
+  sceneStyle,
   ...props
 }: React.ComponentProps<typeof Tabs> & {
   tabBarStyle?: ViewStyle;
   headerStyle?: ViewStyle;
+  sceneStyle?: ViewStyle;
 }) {
   props.screenOptions = {
     ...props.screenOptions,
     tabBarStyle,
     headerStyle,
+    sceneStyle,
   };
   return <Tabs {...props} />;
 }
@@ -23,4 +26,5 @@ function StyledTabsImpl({
 export const StyledTabs = cssInterop(StyledTabsImpl, {
   tabBarClassName: "tabBarStyle",
   headerClassName: "headerStyle",
+  sceneClassName: "sceneStyle",
 });

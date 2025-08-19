@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 
 const Profile = () => {
   return (
-    <View>
+    <View className="pt-safe">
       <Text>Profile</Text>
     </View>
   );

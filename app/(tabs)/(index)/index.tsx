@@ -9,7 +9,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="text-black dark:text-white">Waddup!</Text>
+      <Text className="text-black">Home Screen</Text>
     </View>
   );
 }

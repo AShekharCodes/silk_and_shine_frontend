@@ -15,8 +15,8 @@ const CustomTabBar = ({
   const [tabBarWidth, setTabBarWidth] = useState(0);
   const tabWidth = tabBarWidth / state.routes.length;
   const translateX = useSharedValue(state.index * tabWidth);
-  const colorScheme = useColorScheme();
-  const isDarkMode = colorScheme === "dark";
+  // const colorScheme = useColorScheme();
+  // const isDarkMode = colorScheme === "dark";
   const indicatorPadding = 20;
   const indicatorWidth =
     tabWidth > 2 * indicatorPadding
@@ -31,7 +31,7 @@ const CustomTabBar = ({
   }, [state.index, tabWidth, translateX]);
   return (
     <View
-      className="flex-row bg-white dark:bg-gray-900 relative elevation-md pb-safe py-2"
+      className="flex-row bg-primary-default/20 relative pb-safe py-2"
       onLayout={(e) => setTabBarWidth(e.nativeEvent.layout.width)}
     >
       {tabBarWidth > 0 && (
@@ -75,29 +75,30 @@ const CustomTabBar = ({
             key={index}
             onPress={onPress}
             onLongPress={onLongPress}
-            className="flex-1 items-center justify-center"
+            className="flex-1 items-center justify-center mb-2"
           >
             {options.tabBarIcon &&
               options.tabBarIcon({
                 focused: isFocused,
-                color: isFocused
-                  ? "#FF6B00"
-                  : isDarkMode
-                    ? "#ffffff"
-                    : "#000000",
-                size: 28,
+                color: isFocused ? "#FF6B00" : "#000000",
+                size: isFocused ? 32 : 28,
               })}
-            <Text
-              className={`text-xs mt-1 font-poppins-bold ${
-                isFocused
-                  ? "text-primary-default"
-                  : isDarkMode
-                    ? "text-white"
-                    : "text-black"
-              }`}
-            >
-              {label as string}
-            </Text>
+            {isFocused ? (
+              ""
+            ) : (
+              <Text
+                className={`text-xs mt-1 font-poppins-bold ${
+                  isFocused ? "text-primary-default" : "text-black"
+                }`}
+              >
+                {label as string}
+              </Text>
+            )}
+            {/* {route.name === "cart" && (
+              <Text className="absolute text-xs font-poppins-bold bg-primary-dark top-0 right-5 p-1 rounded-full border">
+                {options.tabBarBadge}
+              </Text>
+            )} */}
           </TouchableOpacity>
         );
       })}

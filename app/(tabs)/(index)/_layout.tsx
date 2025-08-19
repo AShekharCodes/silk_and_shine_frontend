@@ -1,13 +1,15 @@
 import { StyledStack } from "@/components/navigation/stack";
+import CustomHomeHeader from "@/components/ui/CustomHomeHeader";
 import { Stack } from "expo-router";
 
 const StackLayout = () => {
   return (
     <StyledStack
-      contentClassName="bg-white dark:bg-gray-800"
-      headerClassName="bg-primary-default text-white dark:text-black"
+      contentClassName="bg-white"
+      headerClassName="bg-primary-default"
+      screenOptions={{ header: () => <CustomHomeHeader /> }}
     >
-      <Stack.Screen name="index" options={{ title: "" }} />
+      <Stack.Screen name="index" />
     </StyledStack>
   );
 };
