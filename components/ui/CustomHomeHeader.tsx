@@ -20,7 +20,7 @@ const CustomHomeHeader = () => {
           onPress={() => console.log("Camera pressed")}
         /> */}
       </View>
-      <View className="flex-row items-center gap-2 p-2 bg-white rounded-md border border-black">
+      {/* <View className="flex-row items-center gap-2 p-2 bg-white rounded-md border border-black">
         <Ionicons name="location" size={14} color="black" />
         <Text className="font-poppins-medium text-sm text-gray-600">
           Deliver to Abhishek - Guwahati, 781125
@@ -32,7 +32,7 @@ const CustomHomeHeader = () => {
         >
           <Text className="text-xs  font-poppins-regular">Change</Text>
         </Pressable>
-      </View>
+      </View> */}
     </View>
   );
 };
