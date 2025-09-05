@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 
 const Explore = () => {
   return (
-    <View>
+    <View className="pt-safe">
       <Text>Explore</Text>
     </View>
   );

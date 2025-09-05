@@ -81,21 +81,17 @@ const CustomTabBar = ({
               options.tabBarIcon({
                 focused: isFocused,
                 color: isFocused ? "#FF6B00" : "#000000",
-                size: isFocused ? 32 : 28,
+                size: isFocused ? 30 : 28,
               })}
             {isFocused ? (
               ""
             ) : (
-              <Text
-                className={`text-xs mt-1 font-poppins-bold ${
-                  isFocused ? "text-primary-default" : "text-black"
-                }`}
-              >
+              <Text className="text-xs mt-1 font-poppins-bold text-black">
                 {label as string}
               </Text>
             )}
             {/* {route.name === "cart" && (
-              <Text className="absolute text-xs font-poppins-bold bg-primary-dark top-0 right-5 p-1 rounded-full border">
+              <Text className="absolute right-2 top-0 font-poppins-regular text-base rounded-full bg-white w-5">
                 {options.tabBarBadge}
               </Text>
             )} */}

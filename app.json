@@ -2,7 +2,7 @@
   "expo": {
     "name": "Silk and Shine",
     "slug": "silk_and_shine",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon-android.png",
     "scheme": "silkandshine",
@@ -14,10 +14,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon-android.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.abhishek.expo.silk_and_shine"
+      "package": "com.silkandshine.mobile"
     },
     "plugins": [
       "expo-router",
@@ -41,7 +41,8 @@
             "./assets/fonts/Poppins-Thin.ttf"
           ]
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true

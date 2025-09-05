@@ -23,7 +23,7 @@ const SearchBar = ({
   onPress,
 }: SearchBarProps) => {
   return (
-    <View className="flex-1 flex-row gap-2 w-full h-12 items-center bg-white px-2 border border-gray-300 rounded-md overflow-hidden">
+    <View className="flex-1 flex-row gap-2 w-full h-12 items-center bg-white px-2 border border-black rounded-md overflow-hidden">
       <Ionicons name="search" size={22} color="#6C757D" />
       <TextInput
         value={value}
@@ -43,7 +43,7 @@ const SearchBar = ({
       )}
       {showScanner && (
         <Ionicons
-          name="scan"
+          name="qr-code-outline"
           size={22}
           color="#6C757D"
           onPress={() => console.log("Scanner pressed")}

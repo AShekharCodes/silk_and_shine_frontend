@@ -5,12 +5,17 @@ import "@/global.css";
 //   DefaultTheme,
 //   ThemeProvider,
 // } from "@react-navigation/native";
-import { Stack } from "expo-router";
 // import { useColorScheme } from "react-native";
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 const InitialLayout = () => {
   return (
-    <StyledStack>
+    <StyledStack
+      initialRouteName="onboarding"
+      screenOptions={{ animation: "ios_from_right" }}
+    >
+      <Stack.Screen name="onboarding" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </StyledStack>
   );
@@ -20,9 +25,12 @@ const RootLayout = () => {
   // const colorScheme = useColorScheme();
 
   return (
-    // <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-    <InitialLayout />
-    // </ThemeProvider>
+    <>
+      {/* <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}> */}
+      <StatusBar style="dark" />
+      <InitialLayout />
+      {/* </ThemeProvider> */}
+    </>
   );
 };
 

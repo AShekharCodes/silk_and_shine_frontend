@@ -27,7 +27,7 @@ const TabLayout = () => {
         options={{
           title: "Search",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="search" color={color} size={size} />
+            <Ionicons name="search-sharp" color={color} size={size} />
           ),
         }}
       />
@@ -36,7 +36,7 @@ const TabLayout = () => {
         options={{
           title: "Explore",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="list" color={color} size={size} />
+            <Ionicons name="pricetags" color={color} size={size} />
           ),
         }}
       />
@@ -55,7 +55,7 @@ const TabLayout = () => {
         options={{
           title: "Profile",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person-circle" color={color} size={size} />
+            <Ionicons name="person-sharp" color={color} size={size} />
           ),
         }}
       />
